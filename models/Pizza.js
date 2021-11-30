@@ -9,7 +9,7 @@ const PizzaSchema = new Schema({
     },
     createdAt: {
         type: Date,
-        deafult: Date.now
+        default: Date.now
     },
     size: {
         type: String,

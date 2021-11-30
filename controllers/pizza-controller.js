@@ -37,7 +37,7 @@ createPizza({ body }, res) {
 
 //update pizza by Id
 updatePizza({ params, body }, res){
-    PizzafindOneAndUpdate({ _id: params.id }, body, { new: true })
+    Pizza.findOneAndUpdate({ _id: params.id }, body, { new: true })
     .then(dbPizzaData => {
         if (!dbPizzaData) {
             res.status(404).json({ message: 'No pizza found with this id!'})
